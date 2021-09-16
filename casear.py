@@ -6,15 +6,15 @@ def casear(text, posun):
     abeceda = 'abcdefghijklmnopqrstuvwxyz'
     indexy_v_abecede = []
     novy_text = ''
-#ziskani indexů písmen v naší abecedě
+
     for pismeno in text.lower():
         if pismeno in abeceda:
             indexy_v_abecede.append(abeceda.index(pismeno))
-#posun indexů získaných výše
+# shift of indexes according to the given shift
     posunute_indexy = []
     for i in indexy_v_abecede:
         if i+posun>25:
-            posunute_indexy.append((i + posun) % len(abeceda)) # posun přes nulu
+            posunute_indexy.append((i + posun) % len(abeceda)) # shift over zero 
         else:
             posunute_indexy.append(i + posun)
 
@@ -23,5 +23,5 @@ def casear(text, posun):
     print(novy_text)
 
 
-message = 'Ahoj, jmenuji se Matej'
+message = 'My name is Matej'
 casear(message, 1)

@@ -20,8 +20,8 @@ def casear(text, posun):
 
     for ind in posunute_indexy:
         novy_text = novy_text + abeceda[ind]
-    print(novy_text)
+    return novy_text
 
 
 message = 'My name is Matej'
-casear(message, 1)
+print(casear(message, 1))
